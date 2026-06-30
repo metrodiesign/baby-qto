@@ -1,0 +1,179 @@
+/* =========================================================
+   BabyQto — styles.css
+   Design tokens, animations และ component ที่เสริมจาก Tailwind
+   ========================================================= */
+
+:root {
+  /* Brand palette */
+  --bq-mint: #34d399;      /* เขียวมิ้นต์ — ธรรมชาติ/ปลอดภัย */
+  --bq-mint-dark: #059669; /* เขียวเข้ม */
+  --bq-cream: #fbfaf3;     /* ครีมอุ่น — พื้นหลัง */
+  --bq-coral: #fb7c5b;     /* คอรัล — CTA */
+  --bq-coral-dark: #f0623a;
+  --bq-sky: #bae6fd;       /* ฟ้าอ่อน — สีรอง */
+  --bq-ink: #1f2937;       /* ตัวอักษรหลัก */
+  --bq-ink-soft: #4b5563;  /* ตัวอักษรรอง */
+
+  /* Effects */
+  --shadow-soft: 0 12px 40px -12px rgba(16, 122, 87, 0.25);
+  --shadow-card: 0 10px 30px -12px rgba(31, 41, 55, 0.18);
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+}
+
+/* พื้นหลังครีมทั้งเพจ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* เผื่อ navbar sticky */
+}
+
+body {
+  font-family: "Noto Sans Thai", "IBM Plex Sans Thai", system-ui, sans-serif;
+  color: var(--bq-ink);
+  background-color: var(--bq-cream);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Kanit", "Noto Sans Thai", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* พื้นหลัง blob ตกแต่ง */
+.bq-bg-decor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(40rem 40rem at 80% -10%, rgba(186, 230, 253, 0.55), transparent 60%),
+    radial-gradient(34rem 34rem at -10% 10%, rgba(52, 211, 153, 0.35), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ปุ่ม CTA หลัก */
+.bq-btn-primary {
+  background: linear-gradient(135deg, var(--bq-coral), var(--bq-coral-dark));
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.bq-btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 16px 44px -12px rgba(240, 98, 58, 0.55);
+}
+.bq-btn-primary:active { transform: translateY(0); }
+
+/* ปุ่มรอง */
+.bq-btn-secondary {
+  background: #fff;
+  color: var(--bq-mint-dark);
+  border: 2px solid rgba(5, 150, 105, 0.18);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.bq-btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--bq-mint);
+  background: #f0fdf4;
+}
+
+/* การ์ดทั่วไป */
+.bq-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.bq-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px -16px rgba(31, 41, 55, 0.22);
+}
+
+/* วงกลมไอคอน */
+.bq-icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
+/* ====== Scroll reveal ====== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* เดelay แบบสไตเกอร์ผ่าน inline style --d */
+[data-reveal][style*="--d"].is-visible {
+  transition-delay: var(--d);
+}
+
+/* ====== FAQ accordion ====== */
+.bq-faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease, padding .4s ease;
+}
+.bq-faq-item[data-open="true"] .bq-faq-body {
+  max-height: 400px;
+}
+.bq-faq-item[data-open="true"] .bq-faq-icon {
+  transform: rotate(45deg);
+}
+.bq-faq-icon { transition: transform .3s ease; }
+
+/* ====== Floating animation (hero product) ====== */
+.bq-float {
+  animation: bq-float 4s ease-in-out infinite;
+}
+@keyframes bq-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ตัวนับแบบ pulse บน badge */
+.bq-pulse {
+  animation: bq-pulse 2.4s ease-in-out infinite;
+}
+@keyframes bq-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.45); }
+  50% { box-shadow: 0 0 0 14px rgba(52, 211, 153, 0); }
+}
+
+/* ====== Mobile menu ====== */
+.bq-mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+.bq-mobile-menu[data-open="true"] {
+  max-height: 420px;
+}
+
+/* ====== Marquee (trust bar) ====== */
+.bq-marquee {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: bq-marquee 26s linear infinite;
+}
+@keyframes bq-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ====== Accessibility: ลดอนิเมชัน ====== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+}
