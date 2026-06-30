@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===================== SEO ===================== -->
+  <title>BabyQto เบบี้คิวโตะ | สายรัดข้อมือกันยุงเด็ก ธรรมชาติ 100% ตะไคร้หอม</title>
+  <meta name="description" content="BabyQto สายรัดข้อมือกันยุงเด็ก ธรรมชาติ 100% จากตะไคร้หอม ปลอดสารเคมี ปลอดภัยต่อลูกน้อย ใช้ได้นานสูงสุด 720 ชั่วโมง ไม่ต้องทา ไม่ต้องฉีด แค่ใส่ก็อุ่นใจ" />
+  <meta name="keywords" content="สายรัดข้อมือกันยุง, กันยุงเด็ก, BabyQto, เบบี้คิวโตะ, ตะไคร้หอม, กันยุงธรรมชาติ, กันยุงน้องหมา, สายรัดข้อมือกันยุงเด็ก" />
+  <meta name="author" content="BabyQto" />
+  <meta name="theme-color" content="#34d399" />
+  <link rel="canonical" href="https://babyqto.com/" />
+
+  <!-- ===================== Open Graph / Facebook ===================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="th_TH" />
+  <meta property="og:site_name" content="BabyQto เบบี้คิวโตะ" />
+  <meta property="og:title" content="BabyQto สายรัดข้อมือกันยุงเด็ก ธรรมชาติ 100%" />
+  <meta property="og:description" content="ไม่ต้องทา ไม่ต้องฉีด แค่ใส่ก็อุ่นใจ — กันยุงด้วยตะไคร้หอม 30% ปลอดภัยต่อลูกน้อย ใช้ได้นานถึง 720 ชั่วโมง" />
+  <meta property="og:url" content="https://babyqto.com/" />
+  <meta property="og:image" content="assets/photo-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ===================== Favicon ===================== -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- ===================== Fonts ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===================== Tailwind (Play CDN) ===================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mint: { DEFAULT: "#34d399", dark: "#059669", soft: "#d1fae5" },
+            cream: "#fbfaf3",
+            coral: { DEFAULT: "#fb7c5b", dark: "#f0623a" },
+            sky2: "#bae6fd",
+            ink: { DEFAULT: "#1f2937", soft: "#4b5563" },
+          },
+          fontFamily: {
+            display: ['Kanit', '"Noto Sans Thai"', 'system-ui', 'sans-serif'],
+            sans: ['"Noto Sans Thai"', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: { '2xl': '1.5rem', '3xl': '2rem' },
+        },
+      },
+    };
+  </script>
+
+  <!-- ===================== Custom styles ===================== -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-cream text-ink antialiased">
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header id="bq-navbar" class="fixed top-0 inset-x-0 z-50 bg-transparent transition-colors duration-300">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-2.5 group">
+          <!-- TODO: แทนที่ด้วยโลโก้จริง (assets/logo.svg หรือ .png) -->
+          <img src="assets/favicon.svg" alt="BabyQto" class="w-9 h-9 rounded-xl shadow-sm" />
+          <span class="font-display font-600 text-lg tracking-tight">
+            Baby<span class="text-mint-dark">Qto</span>
+          </span>
+        </a>
+
+        <!-- Desktop menu -->
+        <div class="hidden lg:flex items-center gap-8 font-medium text-ink-soft">
+          <a href="#features" class="hover:text-mint-dark transition">จุดเด่น</a>
+          <a href="#how" class="hover:text-mint-dark transition">วิธีใช้</a>
+          <a href="#ingredients" class="hover:text-mint-dark transition">ส่วนผสม</a>
+          <a href="#reviews" class="hover:text-mint-dark transition">รีวิว</a>
+          <a href="#faq" class="hover:text-mint-dark transition">คำถาม</a>
+        </div>
+
+        <!-- CTA + mobile toggle -->
+        <div class="flex items-center gap-3">
+          <a href="https://shopee.co.th/babyqto" target="_blank" rel="noopener"
+             class="hidden sm:inline-flex bq-btn-primary font-display font-500 px-5 py-2.5 rounded-full text-sm">
+            ซื้อเลย →
+          </a>
+          <button id="bq-menu-btn" aria-label="เปิดเมนู" aria-expanded="false"
+                  class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-sm">
+            <svg class="w-6 h-6 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="bq-mobile-menu" class="bq-mobile-menu lg:hidden" data-open="false">
+        <div class="bg-white rounded-2xl shadow-lg mt-2 p-3 flex flex-col gap-1 mb-3">
+          <a href="#features" class="px-4 py-3 rounded-xl hover:bg-mint-soft transition font-medium">จุดเด่นสินค้า</a>
+          <a href="#how" class="px-4 py-3 rounded-xl hover:bg-mint-soft transition font-medium">วิธีใช้</a>
+          <a href="#ingredients" class="px-4 py-3 rounded-xl hover:bg-mint-soft transition font-medium">ส่วนผสม & ความปลอดภัย</a>
+          <a href="#reviews" class="px-4 py-3 rounded-xl hover:bg-mint-soft transition font-medium">รีวิว</a>
+          <a href="#faq" class="px-4 py-3 rounded-xl hover:bg-mint-soft transition font-medium">คำถามที่พบบ่อย</a>
+          <a href="https://shopee.co.th/babyqto" target="_blank" rel="noopener"
+             class="bq-btn-primary text-center font-display font-500 px-4 py-3 rounded-xl mt-1">ซื้อเลย →</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section id="home" class="relative bq-bg-decor overflow-hidden pt-28 md:pt-36 pb-16 md:pb-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+        <!-- Copy -->
+        <div data-reveal>
+          <span class="inline-flex items-center gap-2 bg-mint-soft text-mint-dark font-medium text-sm px-4 py-1.5 rounded-full mb-6">
+            <span class="w-2 h-2 rounded-full bg-mint bq-pulse"></span>
+            ธรรมชาติ 100% • ปลอดภัยต่อลูกน้อย
+          </span>
+
+          <h1 class="font-display font-700 text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-6">
+            ไม่ต้องทา<br class="hidden sm:block" />
+            ไม่ต้องฉีด<br />
+            <span class="text-mint-dark">แค่ใส่ก็อุ่นใจ</span>
+          </h1>
+
+          <p class="text-lg text-ink-soft mb-8 max-w-lg leading-relaxed">
+            สายรัดข้อมือกันยุงเด็กจาก <strong class="font-600 text-ink">ตะไคร้หอม 30%</strong>
+            ปลอดสารเคมี ใช้ได้นานสูงสุด <strong class="font-600 text-ink">720 ชั่วโมง</strong>
+            ปกป้องลูกน้อยจากยุงพิษและโรคไข้เลือดออก
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://shopee.co.th/babyqto" target="_blank" rel="noopener"
+               class="bq-btn-primary font-display font-500 px-7 py-3.5 rounded-full inline-flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.8 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg>
+              ซื้อสินค้าได้ที่ Shopee
+            </a>
+            <a href="#features" class="bq-btn-secondary font-display font-500 px-6 py-3.5 rounded-full">
+              ดูจุดเด่น
+            </a>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="flex flex-wrap gap-x-6 gap-y-3 mt-9 text-sm text-ink-soft">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-mint-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1l2.6 5.6L18 7.5l-4 4 1 6.2L10 14.8 5 17.7l1-6.2-4-4 5.4-.9z"/></svg>
+              <span>⭐ 4.9 / 5</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-mint-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>ขายแล้ว 1,000+ ชิ้น</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-mint-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18"/></svg>
+              <span>สมุนไพรไทย</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product visual -->
+        <div class="relative" data-reveal style="--d:.15s">
+          <div class="relative max-w-md mx-auto">
+            <!-- Glow blob -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-mint/40 to-sky2/50 blur-3xl rounded-full"></div>
+
+            <!-- ภาพสินค้าจริง -->
+            <div class="relative bq-float">
+              <div class="aspect-square bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border-4 border-white">
+                <img src="assets/photo-7.jpg"
+                     alt="BabyQto สายรัดข้อมือกันยุงเด็ก ลายน่ารักหลากสี หลายดีไซน์"
+                     class="w-full h-full object-cover"
+                     loading="eager" />
+              </div>
+              <!-- เฟรมขอบน่ารัก -->
+              <div class="absolute -inset-3 rounded-[3rem] border-2 border-dashed border-mint/40 -z-10"></div>
+            </div>
+
+            <!-- Floating chips -->
+            <div class="absolute -left-4 top-10 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2.5 bq-float" style="animation-delay:-1s">
+              <div class="w-9 h-9 rounded-full bg-mint-soft flex items-center justify-center">
+                <svg class="w-5 h-5 text-mint-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-ink-soft">อายุการใช้งาน</div>
+                <div class="font-display font-600 text-sm">720 ชม.</div>
+              </div>
+            </div>
+
+            <div class="absolute -right-3 bottom-8 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2.5 bq-float" style="animation-delay:-2.2s">
+              <div class="w-9 h-9 rounded-full bg-amber-100 flex items-center justify-center text-base">🌿</div>
+              <div>
+                <div class="text-xs text-ink-soft">ส่วนผสม</div>
+                <div class="font-display font-600 text-sm">ตะไคร้หอม 30%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOCIAL PROOF MARQUEE
+       ============================================================ -->
+  <section class="py-6 bg-mint-dark text-white overflow-hidden">
+    <div class="relative">
+      <div class="bq-marquee">
+        <!-- duplicate set for seamless loop -->
+        <div class="flex gap-12 px-6 items-center whitespace-nowrap font-display font-500 text-lg">
+          <span>🌿 ธรรมชาติ 100%</span><span>•</span>
+          <span>👶 ปลอดภัยต่อเด็ก</span><span>•</span>
+          <span>⏱️ ใช้ได้ 720 ชม.</span><span>•</span>
+          <span>🦟 กันยุงไข้เลือดออก</span><span>•</span>
+          <span>⭐ รีวิว 4.9/5</span><span>•</span>
+          <span>🚫 ไม่มีสารเคมี</span><span>•</span>
+        </div>
+        <div class="flex gap-12 px-6 items-center whitespace-nowrap font-display font-500 text-lg" aria-hidden="true">
+          <span>🌿 ธรรมชาติ 100%</span><span>•</span>
+          <span>👶 ปลอดภัยต่อเด็ก</span><span>•</span>
+          <span>⏱️ ใช้ได้ 720 ชม.</span><span>•</span>
+          <span>🦟 กันยุงไข้เลือดออก</span><span>•</span>
+          <span>⭐ รีวิว 4.9/5</span><span>•</span>
+          <span>🚫 ไม่มีสารเคมี</span><span>•</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROBLEM -> SOLUTION
+       ============================================================ -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div data-reveal>
+          <span class="text-coral font-display font-600 uppercase tracking-wider text-sm">ปัญหา</span>
+          <h2 class="font-display font-700 text-3xl md:text-4xl mt-2 mb-5">ยุงรังควาน<br />ลูกน้อยเสี่ยงโรคอันตราย</h2>
+          <p class="text-ink-soft leading-relaxed mb-5">
+            ยุงลายและยุงชนิดต่าง ๆ ที่พบบ่อยในบ้านเราเป็นพาหะของ <strong class="text-ink">โรคไข้เลือดออก</strong>
+            ซึ่งอันตรายโดยเฉพาะในเด็กเล็ก สเปรย์และครีมกันยุงทั่วไปมักมีสารเคมี ทำให้พ่อแม่กังวลเรื่องผิวบอบบางของลูก
+          </p>
+          <ul class="space-y-3 text-ink-soft">
+            <li class="flex gap-3"><span class="text-coral">✕</span> สเปรย์ฉีดติดปาก ตา จมูกเด็ก</li>
+            <li class="flex gap-3"><span class="text-coral">✕</span> ครีมทาเหนียว ระคายเคืองผิว</li>
+            <li class="flex gap-3"><span class="text-coral">✕</span> สารเคมี DEET สะสมในร่างกาย</li>
+          </ul>
+        </div>
+
+        <div data-reveal style="--d:.15s" class="relative">
+          <div class="bq-card p-8 md:p-10 bg-gradient-to-br from-mint-soft to-white">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bq-icon-chip bg-mint text-white">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span class="text-mint-dark font-display font-600 uppercase tracking-wider text-sm">ทางแก้</span>
+            </div>
+            <h3 class="font-display font-700 text-2xl md:text-3xl mb-3">แค่สวมสายรัด<br />ก็กันยุงได้ตลอดวัน</h3>
+            <p class="text-ink-soft leading-relaxed mb-6">
+              BabyQto ปล่อยกลิ่นตะไคร้หอมอ่อน ๆ ขับไล่ยุงตามธรรมชาติ ไม่สัมผัสผิวลูกโดยตรง
+              จึงปลอดภัยกว่า สบายใจกว่า แถมดีไซน์น่ารักใส่ได้ทุกวัน
+            </p>
+            <a href="#features" class="bq-btn-secondary font-display font-500 px-6 py-3 rounded-full inline-block">เปรียบเทียบจุดเด่น →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES
+       ============================================================ -->
+  <section id="features" class="py-16 md:py-24 bg-white relative overflow-hidden">
+    <!-- พื้นหลังตกแต่ง -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-mint-soft/40 rounded-full blur-3xl -z-0"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-sky2/30 rounded-full blur-3xl -z-0"></div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+      <!-- Header + social proof -->
+      <div class="text-center max-w-2xl mx-auto mb-12" data-reveal>
+        <span class="text-mint-dark font-display font-600 uppercase tracking-wider text-sm">จุดเด่นสินค้า</span>
+        <h2 class="font-display font-700 text-3xl md:text-5xl mt-2 mb-4">ทำไมต้อง BabyQto?</h2>
+        <p class="text-ink-soft text-lg">ออกแบบมาเพื่อความปลอดภัยและความสบายใจของคุณแม่และลูกน้อย</p>
+        <!-- Social proof inline -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-5 bg-mint-soft/60 rounded-full px-6 py-2.5 text-sm font-medium">
+          <span class="flex items-center gap-1.5"><span class="text-amber-400">★★★★★</span> 4.9/5</span>
+          <span class="w-px h-4 bg-mint-dark/30"></span>
+          <span>👶 ขายแล้ว 1,000+ ชิ้น</span>
+          <span class="w-px h-4 bg-mint-dark/30"></span>
+          <span>💚 คุณแม่ทั่วไทยเลือกใช้</span>
+        </div>
+      </div>
+
+      <!-- Featured banner: คำมั่นสัญญาหลัก -->
+      <div class="relative bq-bg-decor overflow-hidden rounded-[2rem] bg-gradient-to-br from-mint-dark to-mint p-8 md:p-12 text-white mb-12" data-reveal>
+        <div class="relative z-10 grid md:grid-cols-[1fr_auto] gap-6 items-center">
+          <div>
+            <span class="inline-block bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs font-display font-600 mb-3">🎁 โปรพิเศษวันนี้</span>
+            <h3 class="font-display font-700 text-2xl md:text-3xl leading-tight mb-2">แค่ใส่สายรัดเส้นเดียว<br />กันยุงได้ยาว 720 ชั่วโมง</h3>
+            <p class="text-white/90">ไม่ทา ไม่ฉีด ไม่สัมผัสผิว — ปกป้องลูกน้อยจากยุงพิษและไข้เลือดออกตลอด 30 วัน</p>
+          </div>
+          <div class="text-center bg-white/15 backdrop-blur rounded-2xl px-7 py-5 border border-white/25 shrink-0">
+            <div class="text-white/70 text-xs line-through">ราคาปกติ ฿299</div>
+            <div class="font-display font-700 text-3xl">฿199</div>
+            <a href="https://shopee.co.th/babyqto" target="_blank" rel="noopener"
+               class="mt-3 inline-flex items-center gap-1.5 bg-white text-mint-dark font-display font-600 px-5 py-2.5 rounded-full text-sm hover:bg-mint-soft transition shadow-lg">
+              สั่งเลย →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1 -->
+        <div class="bq-card p-7 relative" data-reveal>
+          <span class="absolute top-5 right-5 bg-mint-soft text-mint-dark text-xs font-display font-600 px-2.5 py-1 rounded-full">เด่นสุด</span>
+          <div class="w-14 h-14 bq-icon-chip bg-gradient-to-br from-mint-soft to-mint/30 text-mint-dark mb-5 text-2xl">🌿</div>
+          <h3 class="font-display font-600 text-xl mb-2">ตะไคร้หอมเข้มข้น 30%</h3>
+          <p class="text-ink-soft leading-relaxed">สารสกัดจากตะไคร้หอมธรรมชาติปล่อยกลิ่นไล่ยุงอย่างอ่อนโยน ไม่ฉุน ไม่รบกวนจมูกเด็ก</p>
+        </div>
+        <!-- 2 -->
+        <div class="bq-card p-7" data-reveal style="--d:.08s">
+          <div class="w-14 h-14 bq-icon-chip bg-gradient-to-br from-sky-100 to-sky-200 text-sky-600 mb-5 text-2xl">⏱️</div>
+          <h3 class="font-display font-600 text-xl mb-2">อายุการใช้งานยาว 720 ชม.</h3>
+          <p class="text-ink-soft leading-relaxed">ใช้ต่อเนื่องได้นานถึง 30 วัน คุ้มค่าคุ้มราคา ไม่ต้องเปลี่ยนบ่อย</p>
+        </div>
+        <!-- 3 -->
+        <div class="bq-card p-7" data-reveal style="--d:.16s">
+          <div class="w-14 h-14 bq-icon-chip bg-gradient-to-br from-pink-100 to-rose-200 text-pink-600 mb-5 text-2xl">👶</div>
+          <h3 class="font-display font-600 text-xl mb-2">ปลอดภัยต่อเด็ก</h3>
+          <p class="text-ink-soft leading-relaxed">ไม่มีสารเคมี DEET ไม่สัมผัสผิวโดยตรง เหมาะกับเด็กและทารกแรกเกิด</p>
+        </div>
+        <!-- 4 -->
+        <div class="bq-card p-7" data-reveal style="--d:.08s">
+          <div class="w-14 h-14 bq-icon-chip bg-gradient-to-br from-amber-100 to-orange-200 text-amber-600 mb-5 text-2xl">💧</div>
+          <h3 class="font-display font-600 text-xl mb-2">กันน้ำ ทนการเล่น</h3>
+          <p class="text-ink-soft leading-relaxed">"อยู่ได้ทน-ซนได้นาน" ใส่ขณะเล่นน้ำ อาบน้ำ วิ่งเล่นได้สบาย</p>
+        </div>
+        <!-- 5 -->
+        <div class="bq-card p-7" data-reveal style="--d:.16s">
+          <div class="w-14 h-14 bq-icon-chip bg-gradient-to-br from-indigo-100 to-indigo-200 text-indigo-600 mb-5 text-2xl">🎨</div>
+          <h3 class="font-display font-600 text-xl mb-2">ดีไซน์น่ารัก หลายลาย</h3>
+          <p class="text-ink-soft leading-relaxed">ลายน่ารักสดใส สวมเหมือนอุปกรณ์แฟชั่น ลูกชอบใส่ ไม่ดึงออก</p>
+        </div>
+        <!-- 6 -->
+        <div class="bq-card p-7" data-reveal style="--d:.24s">
+          <div class="w-14 h-14 bq-icon-chip bg-gradient-to-br from-emerald-100 to-emerald-200 text-emerald-700 mb-5 text-2xl">🦟</div>
+          <h3 class="font-display font-600 text-xl mb-2">ป้องกันไข้เลือดออก</h3>
+          <p class="text-ink-soft leading-relaxed">ไล่ยุงลายพาหะโรคไข้เลือดออก ลดความเสี่ยงให้ลูกน้อยอย่างมีประสิทธิภาพ</p>
+        </div>
+      </div>
+
+      <!-- ตารางเปรียบเทียบ BabyQto vs สเปรย์/ครีมเคมี -->
+      <div class="mt-16" data-reveal>
+        <div class="text-center mb-8">
+          <span class="text-coral font-display font-600 uppercase tracking-wider text-sm">เปรียบเทียบ</span>
+          <h3 class="font-display font-700 text-2xl md:text-3xl mt-2">ทำไม BabyQto ดีกว่าวิธีเดิม ๆ</h3>
+        </div>
+
+        <div class="overflow-x-auto">
+          <div class="min-w-[36rem] bq-card overflow-hidden">
+            <div class="grid grid-cols-3 bg-mint-soft/50 font-display font-600 text-sm md:text-base">
+              <div class="p-4 md:p-5 text-ink-soft">เปรียบเทียบ</div>
+              <div class="p-4 md:p-5 text-center text-mint-dark bg-gradient-to-b from-mint/20 to-transparent">💚 BabyQto</div>
+              <div class="p-4 md:p-5 text-center text-ink-soft">สเปรย์/ครีมทั่วไป</div>
+            </div>
+            <div class="divide-y divide-gray-100">
+              <div class="grid grid-cols-3 items-center text-sm">
+                <div class="p-4 md:p-5 font-medium">สารเคมี DEET</div>
+                <div class="p-4 md:p-5 text-center text-mint-dark text-lg">✓ ปลอดภัย 0%</div>
+                <div class="p-4 md:p-5 text-center text-coral text-lg">✕ มีสารตกค้าง</div>
+              </div>
+              <div class="grid grid-cols-3 items-center text-sm bg-cream/50">
+                <div class="p-4 md:p-5 font-medium">การสัมผัสผิว</div>
+                <div class="p-4 md:p-5 text-center text-mint-dark text-lg">✓ ไม่สัมผัส</div>
+                <div class="p-4 md:p-5 text-center text-coral text-lg">✕ ทา/ฉีดโดยตรง</div>
+              </div>
+              <div class="grid grid-cols-3 items-center text-sm">
+                <div class="p-4 md:p-5 font-medium">อายุการใช้งาน</div>
+                <div class="p-4 md:p-5 text-center text-mint-dark text-lg">✓ 720 ชม.</div>
+                <div class="p-4 md:p-5 text-center text-coral text-lg">✕ ใช้ทีละครั้ง</div>
+              </div>
+              <div class="grid grid-cols-3 items-center text-sm bg-cream/50">
+                <div class="p-4 md:p-5 font-medium">เด็กน้อยใช้ได้</div>
+                <div class="p-4 md:p-5 text-center text-mint-dark text-lg">✓ แรกเกิด</div>
+                <div class="p-4 md:p-5 text-center text-coral text-lg">✕ อายุจำกัด</div>
+              </div>
+              <div class="grid grid-cols-3 items-center text-sm">
+                <div class="p-4 md:p-5 font-medium">กลิ่น</div>
+                <div class="p-4 md:p-5 text-center text-mint-dark text-lg">✓ หอมอ่อน ๆ</div>
+                <div class="p-4 md:p-5 text-center text-coral text-lg">✕ ฉุน</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- แถบการันตี -->
+      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4" data-reveal>
+        <div class="flex items-center gap-3 bg-cream rounded-2xl p-4 border border-mint-soft">
+          <div class="w-11 h-11 bq-icon-chip bg-mint-soft text-mint-dark text-xl shrink-0">🛡️</div>
+          <div>
+            <div class="font-display font-600 text-sm">รับประกันคุณภาพ</div>
+            <div class="text-xs text-ink-soft">คืนเงินถ้าไม่พอใจ</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 bg-cream rounded-2xl p-4 border border-mint-soft">
+          <div class="w-11 h-11 bq-icon-chip bg-amber-100 text-amber-600 text-xl shrink-0">🚚</div>
+          <div>
+            <div class="font-display font-600 text-sm">จัดส่งฟรี</div>
+            <div class="text-xs text-ink-soft">ทั่วประเทศ</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 bg-cream rounded-2xl p-4 border border-mint-soft">
+          <div class="w-11 h-11 bq-icon-chip bg-sky-100 text-sky-600 text-xl shrink-0">💵</div>
+          <div>
+            <div class="font-display font-600 text-sm">เก็บเงินปลายทาง</div>
+            <div class="text-xs text-ink-soft">สะดวก ปลอดภัย</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 bg-cream rounded-2xl p-4 border border-mint-soft">
+          <div class="w-11 h-11 bq-icon-chip bg-pink-100 text-pink-600 text-xl shrink-0">🌿</div>
+          <div>
+            <div class="font-display font-600 text-sm">สมุนไพรไทย</div>
+            <div class="text-xs text-ink-soft">ธรรมชาติ 100%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW TO USE
+       ============================================================ -->
+  <section id="how" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+        <span class="text-mint-dark font-display font-600 uppercase tracking-wider text-sm">วิธีใช้</span>
+        <h2 class="font-display font-700 text-3xl md:text-5xl mt-2 mb-4">ง่ายแค่ 3 ขั้นตอน</h2>
+        <p class="text-ink-soft text-lg">เปิด → สวม → อุ่นใจ</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 relative">
+        <!-- step 1 -->
+        <div class="bq-card p-8 text-center relative" data-reveal>
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-coral text-white font-display font-700 flex items-center justify-center shadow-md">1</div>
+          <div class="text-4xl mb-4 mt-2">📦</div>
+          <h3 class="font-display font-600 text-xl mb-2">เปิดซองสุญญากาศ</h3>
+          <p class="text-ink-soft">เปิดบรรจุภัณฑ์ปิดสนิทเพื่อกระตุ้นกลิ่นตะไคร้หอม</p>
+        </div>
+        <!-- step 2 -->
+        <div class="bq-card p-8 text-center relative" data-reveal style="--d:.12s">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-coral text-white font-display font-700 flex items-center justify-center shadow-md">2</div>
+          <div class="text-4xl mb-4 mt-2">⌚</div>
+          <h3 class="font-display font-600 text-xl mb-2">สวมให้ลูกน้อย</h3>
+          <p class="text-ink-soft">คล้องข้อมือ ข้อเท้า หรือเสียบติดรถเข็น กระเป๋า ผู้เด็ก</p>
+        </div>
+        <!-- step 3 -->
+        <div class="bq-card p-8 text-center relative" data-reveal style="--d:.24s">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-coral text-white font-display font-700 flex items-center justify-center shadow-md">3</div>
+          <div class="text-4xl mb-4 mt-2">💛</div>
+          <h3 class="font-display font-600 text-xl mb-2">อุ่นใจตลอดวัน</h3>
+          <p class="text-ink-soft">กลิ่นไล่ยุงออกฤทธิ์ทันที ปกป้องลูกน้อยได้นานถึง 720 ชั่วโมง</p>
+        </div>
+      </div>
+
+      <!-- usage places chips -->
+      <div class="mt-12 text-center" data-reveal>
+        <p class="text-ink-soft mb-4">สวมหรือแขวนได้หลายจุด:</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="bg-white shadow-sm rounded-full px-4 py-2 text-sm">👶 ข้อมือเด็ก</span>
+          <span class="bg-white shadow-sm rounded-full px-4 py-2 text-sm">🦶 ข้อเท้า</span>
+          <span class="bg-white shadow-sm rounded-full px-4 py-2 text-sm">🛒 รถเข็นเด็ก</span>
+          <span class="bg-white shadow-sm rounded-full px-4 py-2 text-sm">🎒 กระเป๋า</span>
+          <span class="bg-white shadow-sm rounded-full px-4 py-2 text-sm">🤱 ผู้เด็ก</span>
+          <span class="bg-white shadow-sm rounded-full px-4 py-2 text-sm">🚗 เบาะรถยนต์</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INGREDIENTS & SAFETY
+       ============================================================ -->
+  <section id="ingredients" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-reveal class="order-2 lg:order-1">
+          <span class="text-mint-dark font-display font-600 uppercase tracking-wider text-sm">ส่วนผสม & ความปลอดภัย</span>
+          <h2 class="font-display font-700 text-3xl md:text-4xl mt-2 mb-6">จากธรรมชาติ เพื่อลูกน้อย</h2>
+
+          <div class="space-y-5">
+            <div class="flex gap-4">
+              <div class="w-11 h-11 shrink-0 bq-icon-chip bg-amber-100 text-2xl">🌾</div>
+              <div>
+                <h4 class="font-display font-600 text-lg">ตะไคร้หอม (Citronella) 30% w/w</h4>
+                <p class="text-ink-soft text-sm leading-relaxed">สารสกัดจากสมุนไพรไทย ออกฤทธิ์ไล่ยุงอย่างอ่อนโยน ปลอดภัยไม่ระคายเคือง</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 shrink-0 bq-icon-chip bg-mint-soft text-2xl">✅</div>
+              <div>
+                <h4 class="font-display font-600 text-lg">ปราศจาก DEET & สารเคมีอันตราย</h4>
+                <p class="text-ink-soft text-sm leading-relaxed">ไม่ใช้ยาฆ่าแมลง ไม่ใช้สารกันยุงสังเคราะห์ เหมาะกับผิวบอบบาง</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 shrink-0 bq-icon-chip bg-sky-100 text-2xl">🔬</div>
+              <div>
+                <h4 class="font-display font-600 text-lg">ทดสอบความปลอดภัย</h4>
+                <p class="text-ink-soft text-sm leading-relaxed">ผ่านมาตรฐานการผลิต ใช้วัตถุเจือปนอาหารเกรดความปลอดภัยสูง</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-7 p-4 rounded-2xl bg-mint-soft text-mint-dark text-sm flex gap-2.5">
+            <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>เคล็ดลับ: เก็บในซองซิปเมื่อไม่ใช้เพื่อยืดอายุการใช้งานให้เต็ม 720 ชั่วโมง</span>
+          </div>
+        </div>
+
+        <!-- ภาพสินค้าจริง -->
+        <div data-reveal style="--d:.15s" class="order-1 lg:order-2">
+          <div class="relative max-w-md mx-auto">
+            <div class="absolute inset-0 bg-gradient-to-br from-mint/30 to-amber-100/40 blur-2xl rounded-full"></div>
+            <div class="relative rounded-3xl shadow-xl overflow-hidden border-4 border-white">
+              <img src="assets/photo-4.jpg"
+                   alt="ผลิตภัณฑ์ BabyQto จากส่วนผสมธรรมชาติ"
+                   class="w-full aspect-square object-cover"
+                   loading="lazy" />
+            </div>
+            <!-- badge ธรรมชาติ -->
+            <div class="absolute -bottom-4 -right-3 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2.5 bq-float">
+              <div class="w-10 h-10 rounded-full bg-mint-soft flex items-center justify-center text-xl">🌿</div>
+              <div>
+                <div class="text-xs text-ink-soft">ส่วนผสม</div>
+                <div class="font-display font-600 text-sm">ธรรมชาติ 100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       USAGE GALLERY
+       ============================================================ -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+        <span class="text-mint-dark font-display font-600 uppercase tracking-wider text-sm">การใช้งาน</span>
+        <h2 class="font-display font-700 text-3xl md:text-5xl mt-2 mb-4">ใส่ได้ทุกที่ ทุกโอกาส</h2>
+        <p class="text-ink-soft text-lg">เอาใจลูกน้อยในทุกช่วงเวลาของวัน</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- ภาพถ่ายจริงแต่ละโอกาสการใช้งาน -->
+        <div class="bq-card overflow-hidden group" data-reveal>
+          <div class="relative aspect-square overflow-hidden">
+            <img src="assets/photo-5.jpg" alt="ทารกนอนหลับสบายสวมสายรัดกันยุง" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 text-center font-medium">นอนหลับสบาย</div>
+        </div>
+        <div class="bq-card overflow-hidden group" data-reveal style="--d:.08s">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="assets/photo-3.jpg" alt="สายรัดข้อมือกันยุงลายช้างน่ารักในแพ็คเกจ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 text-center font-medium">ออกเที่ยว สนุกกลางแจ้ง</div>
+        </div>
+        <div class="bq-card overflow-hidden group" data-reveal style="--d:.16s">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="assets/photo-2.jpg" alt="สายรัดข้อมือเด็กสีสันสดใสหลายลาย" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 text-center font-medium">เดินช้อปปิ้ง</div>
+        </div>
+        <div class="bq-card overflow-hidden group" data-reveal style="--d:.24s">
+          <div class="relative aspect-square overflow-hidden">
+            <img src="assets/photo-6.jpg" alt="คอลเลกชันสายรัดกันยุงลายน่ารัก" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 text-center font-medium">นั่งรถเดินทาง</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DESIGN GALLERY (ลาย & คอลเลกชัน)
+       ============================================================ -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-mint-soft/40 to-cream">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+        <span class="text-coral font-display font-600 uppercase tracking-wider text-sm">คอลเลกชันลาย</span>
+        <h2 class="font-display font-700 text-3xl md:text-5xl mt-2 mb-4">น่ารักทุกลาย เลือกได้ตามใจลูก</h2>
+        <p class="text-ink-soft text-lg">ดีไซน์สดใสเหมือนของเล่น ลูกชอบใส่ แม่สบายใจ</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <!-- ภาพใหญ่ซ้าย -->
+        <div class="lg:row-span-2 group relative rounded-3xl overflow-hidden shadow-xl" data-reveal>
+          <img src="assets/photo-1.jpg" alt="คอลเลกชันสายรัดข้อมือกันยุง BabyQto แพ็คเกจสีสันสดใส" class="w-full h-full min-h-[20rem] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-7 text-white">
+            <span class="inline-block bg-coral px-3 py-1 rounded-full text-xs font-display font-600 mb-2">ขายดี</span>
+            <h3 class="font-display font-700 text-2xl">แพ็คเกจน่ารัก ของขวัญพิเศษ</h3>
+            <p class="text-white/85 text-sm mt-1">บรรจุภัณฑ์สีสันสดใส เหมาะเป็นของฝากสำหรับคุณแม่มือใหม่</p>
+          </div>
+        </div>
+
+        <!-- ภาพบนขวา -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-xl" data-reveal style="--d:.1s">
+          <img src="assets/photo-6.jpg" alt="สายรัดกันยุงลายดอกไม้และรุ้งสีสันสดใส" class="w-full h-full min-h-[12rem] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
+          <div class="absolute bottom-0 p-5 text-white">
+            <h3 class="font-display font-600 text-lg">ลายดอกไม้ & สายรุ้ง</h3>
+          </div>
+        </div>
+
+        <!-- ภาพล่างขวา -->
+        <div class="group relative rounded-3xl overflow-hidden shadow-xl" data-reveal style="--d:.2s">
+          <img src="assets/photo-7.jpg" alt="สายรัดกันยุงลายสัตว์น่ารัก กบ แพนด้า เรือดำน้ำ" class="w-full h-full min-h-[12rem] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
+          <div class="absolute bottom-0 p-5 text-white">
+            <h3 class="font-display font-600 text-lg">ลายสัตว์น่ารัก</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REVIEWS
+       ============================================================ -->
+  <section id="reviews" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+        <span class="text-mint-dark font-display font-600 uppercase tracking-wider text-sm">รีวิวจากผู้ใช้</span>
+        <h2 class="font-display font-700 text-3xl md:text-5xl mt-2 mb-4">คุณแม่ทั่วไทยเลือก BabyQto</h2>
+        <div class="flex items-center justify-center gap-2 text-lg">
+          <span class="text-amber-400">★★★★★</span>
+          <span class="font-600">4.9/5</span>
+          <span class="text-ink-soft">จาก 1,000+ คำสั่งซื้อ</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- TODO: แทนที่รีวิวด้วยของจริงจาก Shopee/Facebook ได้ที่นี่ -->
+        <div class="bq-card p-7" data-reveal>
+          <div class="text-amber-400 mb-3">★★★★★</div>
+          <p class="text-ink-soft leading-relaxed mb-5">"ลูกใส่แล้วไม่มียุงมากัดเลย กลิ่นหอมตะไคร้อ่อน ๆ ไม่ฉุน ที่สำคัญไม่ต้องทาครีมให้ยุ่งยาก"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-mint-soft text-mint-dark font-display font-600 flex items-center justify-center">ค</div>
+            <div>
+              <div class="font-medium">คุณแม่มายา</div>
+              <div class="text-xs text-ink-soft">ลูกอายุ 8 เดือน</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bq-card p-7" data-reveal style="--d:.1s">
+          <div class="text-amber-400 mb-3">★★★★★</div>
+          <p class="text-ink-soft leading-relaxed mb-5">"เคยกลัวสเปรย์เคมี ตอนนี้เปลี่ยนมาใช้สายรัดนี้แทน ปลอดภัยกว่ามาก แถมลายน่ารักลูกชอบ"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-pink-100 text-pink-600 font-display font-600 flex items-center justify-center">ป</div>
+            <div>
+              <div class="font-medium">คุณแม่เปรี้ยว</div>
+              <div class="text-xs text-ink-soft">ลูกอายุ 2 ขวบ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bq-card p-7" data-reveal style="--d:.2s">
+          <div class="text-amber-400 mb-3">★★★★★</div>
+          <p class="text-ink-soft leading-relaxed mb-5">"ใช้ไปเกือบเดือนยังได้กลิ่นอยู่ คุ้มมาก แขวนรถเข็นตอนไปเที่ยวสบายใจสุด ๆ"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-600 font-display font-600 flex items-center justify-center">น</div>
+            <div>
+              <div class="font-medium">คุณแม่นภา</div>
+              <div class="text-xs text-ink-soft">ลูกอายุ 1 ขวบ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section id="faq" class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-12" data-reveal>
+        <span class="text-mint-dark font-display font-600 uppercase tracking-wider text-sm">คำถามที่พบบ่อย</span>
+        <h2 class="font-display font-700 text-3xl md:text-5xl mt-2">สงสัยอะไรถามได้</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ item template -->
+        <div class="bq-faq-item bq-card overflow-hidden" data-open="false">
+          <button class="bq-faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left" aria-expanded="false">
+            <span class="font-display font-600 text-lg">เด็กเล็กแค่ไหนใช้ได้?</span>
+            <svg class="bq-faq-icon w-5 h-5 text-mint-dark shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="bq-faq-body px-5 text-ink-soft">
+            <p class="pb-5">เนื่องจากเป็นส่วนผสมจากธรรมชาติและไม่สัมผัสผิวโดยตรง จึงเหมาะกับเด็กทารกและเด็กเล็ก อย่างไรก็ตามควรอยู่ในความดูแลของผู้ปกครอง</p>
+          </div>
+        </div>
+
+        <div class="bq-faq-item bq-card overflow-hidden" data-open="false">
+          <button class="bq-faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left" aria-expanded="false">
+            <span class="font-display font-600 text-lg">ใช้ได้นานกี่วันจริงไหม?</span>
+            <svg class="bq-faq-icon w-5 h-5 text-mint-dark shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="bq-faq-body px-5 text-ink-soft">
+            <p class="pb-5">อายุการใช้งานสูงสุด 720 ชั่วโมง (ประมาณ 30 วัน) ขึ้นอยู่กับการใช้งาน เก็บในซองซิปเมื่อไม่ใช้จะช่วยยืดอายุได้นานขึ้น</p>
+          </div>
+        </div>
+
+        <div class="bq-faq-item bq-card overflow-hidden" data-open="false">
+          <button class="bq-faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left" aria-expanded="false">
+            <span class="font-display font-600 text-lg">กันน้ำได้ไหม?</span>
+            <svg class="bq-faq-icon w-5 h-5 text-mint-dark shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="bq-faq-body px-5 text-ink-soft">
+            <p class="pb-5">กันน้ำได้ ใส่ขณะเล่นน้ำหรืออาบน้ำได้ แต่แนะนำให้หลีกเลี่ยงการแช่น้ำนาน ๆ เพื่อรักษาประสิทธิภาพสารสกัด</p>
+          </div>
+        </div>
+
+        <div class="bq-faq-item bq-card overflow-hidden" data-open="false">
+          <button class="bq-faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left" aria-expanded="false">
+            <span class="font-display font-600 text-lg">เด็กแพ้กลิ่นหอมได้ไหม?</span>
+            <svg class="bq-faq-icon w-5 h-5 text-mint-dark shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="bq-faq-body px-5 text-ink-soft">
+            <p class="pb-5">กลิ่นตะไคร้หอมออกแบบมาให้อ่อนโยน ไม่ฉุน แต่หากลูกมีประวัติแพ้กลิ่นจัด แนะนำให้ทดลองสั้น ๆ ก่อนและสังเกตอาการ</p>
+          </div>
+        </div>
+
+        <div class="bq-faq-item bq-card overflow-hidden" data-open="false">
+          <button class="bq-faq-trigger w-full flex items-center justify-between gap-4 p-5 text-left" aria-expanded="false">
+            <span class="font-display font-600 text-lg">สั่งซื้อได้ที่ไหนบ้าง?</span>
+            <svg class="bq-faq-icon w-5 h-5 text-mint-dark shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="bq-faq-body px-5 text-ink-soft">
+            <p class="pb-5">สั่งซื้อได้ทาง Shopee (shopee.co.th/babyqto) และอินบ็อกซ์ทางเพจ Facebook ครับ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+       ============================================================ -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="relative bq-bg-decor overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-mint-dark to-mint p-10 md:p-16 text-center text-white" data-reveal>
+        <div class="relative z-10">
+          <h2 class="font-display font-700 text-3xl md:text-5xl mb-4 leading-tight">อุ่นใจได้แล้ววันนี้</h2>
+          <p class="text-white/90 text-lg mb-8 max-w-xl mx-auto">ปกป้องลูกน้อยจากยุงพิษด้วยวิธีธรรมชาติ สั่งซื้อวันนี้รับส่วนลดพิเศษได้ที่ Shopee</p>
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="https://shopee.co.th/babyqto" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-white text-mint-dark font-display font-600 px-8 py-4 rounded-full hover:bg-mint-soft transition shadow-lg">
+              🛒 ซื้อที่ Shopee
+            </a>
+            <a href="https://www.facebook.com/babyqto" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-white/15 backdrop-blur text-white font-display font-500 px-7 py-4 rounded-full hover:bg-white/25 transition border border-white/30">
+              ทักเพจ Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="bg-ink text-white/80 pt-16 pb-8">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <img src="assets/favicon.svg" alt="BabyQto" class="w-9 h-9 rounded-xl" />
+            <span class="font-display font-600 text-lg text-white">Baby<span class="text-mint">Qto</span></span>
+          </div>
+          <p class="text-sm leading-relaxed max-w-xs">
+            สายรัดข้อมือกันยุงเด็กจากธรรมชาติ 100% ปลอดภัยต่อลูกน้อย ผลิตภัณฑ์คุณภาพเพื่อความอุ่นใจของคุณแม่
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-600 text-white mb-4">เมนู</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#features" class="hover:text-mint transition">จุดเด่นสินค้า</a></li>
+            <li><a href="#how" class="hover:text-mint transition">วิธีใช้งาน</a></li>
+            <li><a href="#ingredients" class="hover:text-mint transition">ส่วนผสม</a></li>
+            <li><a href="#reviews" class="hover:text-mint transition">รีวิว</a></li>
+            <li><a href="#faq" class="hover:text-mint transition">คำถามที่พบบ่อย</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-600 text-white mb-4">ติดต่อ / ติดตาม</h4>
+          <div class="flex flex-wrap gap-3 mb-5">
+            <a href="https://shopee.co.th/babyqto" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-white/10 hover:bg-mint hover:text-ink px-4 py-2.5 rounded-full text-sm transition">
+              🛒 Shopee
+            </a>
+            <a href="https://www.facebook.com/babyqto" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-white/10 hover:bg-mint hover:text-ink px-4 py-2.5 rounded-full text-sm transition">
+              👍 Facebook
+            </a>
+          </div>
+          <!-- TODO: ใส่เบอร์โทร / LINE ID / อีเมล จริง -->
+          <p class="text-sm">อีเมล: hello@babyqto.com</p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+        <p>© <span id="bq-year">2026</span> BabyQto เบบี้คิวโตะ — สงวนลิขสิทธิ์</p>
+        <p>ทำจาก 💚 เพื่อลูกน้อยทุกคน</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
