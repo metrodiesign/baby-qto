@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <!-- เปลือกตะไคร้หอม / สายรัดข้อมือ -->
+  <path d="M14 38c10-9 26-9 36 0" fill="none" stroke="#ecfeff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M16 44c9-6 23-6 32 0" fill="none" stroke="#ecfeff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <!-- หัวใจเล็ก (น่ารัก / อุ่นใจ) -->
+  <path d="M32 16c2.2-3.2 7.5-2.3 7.5 1.7 0 3-3.6 5.3-7.5 8.3-3.9-3-7.5-5.3-7.5-8.3 0-4 5.3-4.9 7.5-1.7z" fill="#fecdd3"/>
+</svg>
